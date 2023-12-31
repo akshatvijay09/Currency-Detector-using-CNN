@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Your Currency Detection App</title>
+</head>
+<body>
+    <header>
+        <h1>Noteify</h1>
+        <h1>Currency Detection App</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Upload an Image of Currency</h2>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <button type="submit" class="button">Detect Currency</button>
+            </form>
+        </section>
+        <section>
+            <h2>Detected Currency:</h2>
+            <p class="stylish-text">{{ detected_currency }}</p>
+        </section>
+    </div>
+    <footer>
+        <p>&#64; Akshat Vijayvargiya</p>
+        <p>&#64; Bhavesh Godwani</p>
+    </footer>
+</body>
+</html>
